@@ -15,7 +15,7 @@ class Genre < Base
   end
 
   def to_hash
-    {id: @id, name: @name, items: @items }
+    { id: @id, name: @name, items: @items }
   end
 end
 
