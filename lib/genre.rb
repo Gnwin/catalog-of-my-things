@@ -8,6 +8,15 @@ class Genre < Base
     super(id)
     @name = name
   end
+
+  def add_item(item)
+    super(item)
+    item.add_genre(self)
+  end
+
+  def to_hash
+    {id: @id, name: @name, items: @items }
+  end
 end
 
 # genre = Genre.new('Godwin')

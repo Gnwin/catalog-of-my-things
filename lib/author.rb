@@ -9,4 +9,13 @@ class Author < Base
     @first_name = first_name
     @last_name = last_name
   end
+
+  def add_item(item)
+    super(item)
+    item.add_author(self)
+  end
+
+  def to_hash
+    {id: @id, first_name: @first_name, last_name: @last_name, items: @items}
+  end
 end
