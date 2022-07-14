@@ -10,10 +10,16 @@ class Movie < Item
   end
 
   def can_be_archived?
-    super == true || silent ? true : false
+    super == true || silent
   end
 
   def to_hash
     { id: @id, publish_date: @publish_date, archived: @archived, silent: @silent }
   end
 end
+
+# movie = Movie.new(20, true)
+# p movie.to_hash
+# p movie.can_be_archived?
+# movie.add_label("Godwin")
+# p movie.label

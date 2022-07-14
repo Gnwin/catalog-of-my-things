@@ -10,10 +10,16 @@ class MusicAlbum < Item
   end
 
   def can_be_archived?
-    super == true && on_spotify ? true : false
+    super == true && on_spotify
   end
 
   def to_hash
     { id: @id, publish_date: @publish_date, archived: @archived, on_spotify: @on_spotify }
   end
 end
+
+# music_album = MusicAlbum.new(20, "fjkjjj")
+# p music_album.to_hash
+# p music_album.can_be_archived?
+# music_album.add_genre("Godwin")
+# p music_album.genre
