@@ -16,7 +16,8 @@ class MusicAlbum < Item
   end
 
   def to_hash
-    { id: @id, title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), archived: @archived, on_spotify: @on_spotify, genre: @genre.to_hash, source: @source.to_hash }
+    { id: @id, title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), archived: @archived,
+      on_spotify: @on_spotify, genre: @genre.to_hash, source: @source.to_hash }
   end
 end
 

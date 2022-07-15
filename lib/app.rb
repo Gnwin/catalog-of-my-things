@@ -71,7 +71,9 @@ class App
 
   def list_all_movies
     puts 'No movies here, pick a number to create a book' if @movies.empty?
-    @movies.each { |movie| puts "[Movie] Title: \"#{movie.title}\", Genre: \"#{movie.genre.name}\", Source: \"#{movie.source.name}\"" }
+    @movies.each do |movie|
+      puts "[Movie] Title: \"#{movie.title}\", Genre: \"#{movie.genre.name}\", Source: \"#{movie.source.name}\""
+    end
   end
 
   def list_all_games

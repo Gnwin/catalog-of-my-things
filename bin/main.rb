@@ -44,7 +44,7 @@ class Main
       when 10 then app.create_a_music_album
       when 11 then app.create_a_movie
       when 12 then app.create_a_game
-      
+
       when 0
         # data1 = app.books.map(&:to_hash)
         # store.write('books', './data/books.json', data1)
