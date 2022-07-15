@@ -4,9 +4,11 @@ require_relative 'item'
 class MusicAlbum < Item
   attr_accessor :on_spotify
 
-  def initialize(publish_date, on_spotify, archived = false, id = SecureRandom.uuid)
-    super(publish_date, archived, id)
+  def initialize(title, publish_date, genre, source, on_spotify = true, archived = false, id = SecureRandom.uuid)
+    super(title, publish_date, archived, id)
     @on_spotify = on_spotify
+    add_genre(genre)
+    add_source(source)
   end
 
   def can_be_archived?
@@ -14,7 +16,7 @@ class MusicAlbum < Item
   end
 
   def to_hash
-    { id: @id, publish_date: @publish_date, archived: @archived, on_spotify: @on_spotify }
+    { id: @id, title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), archived: @archived, on_spotify: @on_spotify, genre: @genre.to_hash, source: @source.to_hash }
   end
 end
 

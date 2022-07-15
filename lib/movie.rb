@@ -4,9 +4,11 @@ require_relative 'item'
 class Movie < Item
   attr_accessor :silent
 
-  def initialize(publish_date, silent, archived = false, id = SecureRandom.uuid)
-    super(publish_date, archived, id)
+  def initialize(title, publish_date, genre, source, silent = true, archived = false, id = SecureRandom.uuid)
+    super(title, publish_date, archived, id)
     @silent = silent
+    add_genre(genre)
+    add_source(source)
   end
 
   def can_be_archived?
@@ -14,7 +16,7 @@ class Movie < Item
   end
 
   def to_hash
-    { id: @id, publish_date: @publish_date, archived: @archived, silent: @silent }
+    { id: @id, title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), archived: @archived, silent: @silent, genre: @genre.to_hash, source: @source.to_hash }
   end
 end
 

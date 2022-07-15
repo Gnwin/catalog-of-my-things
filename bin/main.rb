@@ -15,10 +15,10 @@ class Main
     puts '7 - List all authors'
     puts '8 - List all sources'
 
-    puts 'b - Create/Add a book'
-    puts 'ma - Create/Add a music album'
-    puts 'mov - Create/Add a movie'
-    puts 'g - Create/Add a game'
+    puts '9 - Create/Add a book'
+    puts '10 - Create/Add a music album'
+    puts '11 - Create/Add a movie'
+    puts '12 - Create/Add a game'
 
     puts '0 - exit'
   end
@@ -40,10 +40,10 @@ class Main
       when 7 then app.list_all_authors
       when 8 then app.list_all_sources
 
-      when 'b' then app.add_a_book
-      when 'ma' then app.add_a_music_album
-      when 'mov' then app.add_a_movie
-      when 'g' then app.add_a_game
+      when 9 then app.create_a_book
+      when 10 then app.create_a_music_album
+      when 11 then app.create_a_movie
+      when 12 then app.create_a_game
       
       when 0
         # data1 = app.books.map(&:to_hash)
@@ -55,7 +55,7 @@ class Main
         # puts 'Thanks for using my program. Bye!'
         user_finished = true
       else
-        puts 'Invalid Selection. Please enter a number between 1-8 or b, ma, mov, g'
+        puts 'Invalid Selection. Please select any input between 1-8 or b, ma, mo, g'
       end
     end
   end

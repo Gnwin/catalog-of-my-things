@@ -1,11 +1,13 @@
 require 'securerandom'
+require 'date'
 
 class Item
-  attr_reader :genre, :author, :source, :label, :id
+  attr_reader :title, :genre, :author, :source, :label, :id
   attr_accessor :publish_date, :archived
 
-  def initialize(publish_date, archived = false, id = SecureRandom.uuid)
+  def initialize(title, publish_date, archived = false, id = SecureRandom.uuid)
     @id = id
+    @title = title
     @genre = nil
     @author = nil
     @source = nil
@@ -24,21 +26,21 @@ class Item
 
   def add_genre(genre)
     @genre = genre
-    genre.items.push(self) if defined?(@genre.items) && !genre.items.include?(self)
+    @genre.items.push(self)
   end
 
   def add_author(author)
     @author = author
-    author.items.push(self) if defined?(@author.items) && !author.items.include?(self)
+    @author.items.push(self)
   end
 
   def add_source(source)
     @source = source
-    source.items.push(self) if defined?(@source.items) && !source.items.include?(self)
+    @source.items.push(self)
   end
 
   def add_label(label)
     @label = label
-    label.items.push(self) if defined?(@label.items) && !label.items.include?(self)
+    @label.items.push(self)
   end
 end
