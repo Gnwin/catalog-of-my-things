@@ -8,9 +8,11 @@ AllCops:
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 133
 Metrics/MethodLength:
   Max: 66
+Metrics/ParameterLists:
+  Max: 9
 Metrics/ModuleLength:
   Max: 137
 Metrics/PerceivedComplexity:
