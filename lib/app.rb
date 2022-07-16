@@ -60,9 +60,6 @@ class App
     @music_album_creator = MusicAlbumCreator.new
     @movie_creator = MovieCreator.new
     @game_creator = GameCreator.new
-
-    p @@booksdata
-
     @books =  @@booksdata
     @music_albums = @@music_albums
     @movies = @@movies

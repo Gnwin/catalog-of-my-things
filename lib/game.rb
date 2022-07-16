@@ -25,7 +25,3 @@ class Game < Item
       last_played_at: @last_played_at }
   end
 end
-
-# game = Game.new(20, "fjkjjj", 5, true)
-# p game.to_hash
-# p game.can_be_archived?

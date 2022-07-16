@@ -19,12 +19,3 @@ class Label < Base
     { id: @id, title: @title, color: @color }
   end
 end
-
-# label = Label.new('Godwin', 'red')
-
-# p label
-# p label.id
-# p label.title
-# p label.color
-# label.add_item('jhhjjh')
-# p label.items

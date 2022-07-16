@@ -3,7 +3,6 @@ require_relative '../genre'
 require_relative '../source'
 require_relative 'genre_helper'
 require_relative 'source_helper'
-require 'date'
 
 class MusicAlbumCreator
   def initialize

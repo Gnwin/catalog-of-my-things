@@ -26,9 +26,3 @@ class Book < Item
       publisher: @publisher, cover_state: @cover_state, author: @author.to_hash, label: @label.to_hash }
   end
 end
-
-# book = Book.new(20, "fjkjjj", "hgh", true)
-# p book.to_hash
-# p book.can_be_archived?
-# book.add_author("Godwin")
-# p book.author

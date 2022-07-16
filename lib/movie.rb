@@ -1,6 +1,5 @@
 require 'securerandom'
 require_relative 'item'
-require 'time'
 
 class Movie < Item
   attr_accessor :silent
@@ -21,9 +20,3 @@ class Movie < Item
       genre: @genre.to_hash, source: @source.to_hash }
   end
 end
-
-# movie = Movie.new(20, true)
-# p movie.to_hash
-# p movie.can_be_archived?
-# movie.add_label("Godwin")
-# p movie.label

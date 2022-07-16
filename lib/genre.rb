@@ -18,11 +18,3 @@ class Genre < Base
     { id: @id, name: @name }
   end
 end
-
-# genre = Genre.new('Godwin')
-
-# p genre
-# p genre.id
-# p genre.name
-# genre.add_item('jhhjjh')
-# p genre.items
