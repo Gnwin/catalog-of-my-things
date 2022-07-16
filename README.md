@@ -8,7 +8,7 @@ A console app that keeps a record of different types of things won: books, music
 This setup and run procedure assumes you have Ruby, sql and rspec installed.
 
 ## Video presentation
-<!-- [@Gnwin](https://github.com/Gnwin) -->
+[video link](https://www.loom.com/share/592b885dac9b4d4dac668b90f05eb491)
 
 ## Getting Started
 
