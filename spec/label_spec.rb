@@ -29,7 +29,7 @@ describe Label do
     end
 
     it 'Returns correct hash' do
-      hash = {id: '33', title: 'game', color: 'red' }
+      hash = { id: '33', title: 'game', color: 'red' }
       expect(@label.to_hash).to eq hash
     end
   end

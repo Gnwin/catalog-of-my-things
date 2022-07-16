@@ -8,7 +8,6 @@ require_relative '../lib/label'
 require_relative '../lib/author'
 require_relative '../lib/source'
 
-
 describe Game do
   context 'When testing game class' do
     before :each do

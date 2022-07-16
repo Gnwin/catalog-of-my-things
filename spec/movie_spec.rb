@@ -23,7 +23,8 @@ describe Movie do
     end
 
     it 'Tests to make sure our test Movie becomes the correct format in order to store between sessions' do
-      actual = { title: 'Spiderman', publish_date: '2010-01-01', genre: { name: 'Fiction', id: '33' }, source: { name: 'Disney Plus', id:'33' }, silent: false, archived: false, id: '33' }
+      actual = { title: 'Spiderman', publish_date: '2010-01-01', genre: { name: 'Fiction', id: '33' },
+                 source: { name: 'Disney Plus', id: '33' }, silent: false, archived: false, id: '33' }
       expect(@my_movie.to_hash).to eq actual
     end
   end
