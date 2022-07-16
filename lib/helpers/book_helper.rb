@@ -1,7 +1,6 @@
 require_relative '../book'
 require_relative 'label_helper'
 require_relative 'author_helper'
-require 'date'
 
 class BookCreator
   def initialize

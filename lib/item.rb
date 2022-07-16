@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'date'
 
 class Item
   attr_reader :title, :genre, :author, :source, :label, :id
