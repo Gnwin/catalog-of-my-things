@@ -1,5 +1,4 @@
 require 'securerandom'
-require 'date'
 
 class Item
   attr_reader :title, :genre, :author, :source, :label, :id
@@ -26,21 +25,21 @@ class Item
 
   def add_genre(genre)
     @genre = genre
-    @genre.items.push(self)
+    # genre.items.push(self)
   end
 
   def add_author(author)
     @author = author
-    @author.items.push(self)
+    # author.items.push(self)
   end
 
   def add_source(source)
     @source = source
-    @source.items.push(self)
+    # source.items.push(self)
   end
 
   def add_label(label)
     @label = label
-    @label.items.push(self)
+    # label.items.push(self)
   end
 end

@@ -1,6 +1,6 @@
 require 'securerandom'
 require_relative 'item'
-require 'date'
+require 'time'
 
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
@@ -21,7 +21,7 @@ class Game < Item
   end
 
   def to_hash
-    { id: @id, title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), archived: @archived, multiplayer: @multiplayer,
+    { id: @id, title: @title, publish_date: @publish_date, archived: @archived, multiplayer: @multiplayer,
       last_played_at: @last_played_at }
   end
 end

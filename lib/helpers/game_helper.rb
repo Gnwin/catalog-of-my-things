@@ -7,10 +7,10 @@ class GameCreator
     title = gets.chomp
 
     puts 'Please enter the publish date as YYYY-MM-DD'
-    publish_date = DateTime.parse(gets.chomp)
+    publish_date = gets.chomp
 
     puts 'Please enter the last played date as YYYY-MM-DD'
-    last_played_at = DateTime.parse(gets.chomp)
+    last_played_at = gets.chomp
 
     Game.new(title, publish_date, last_played_at)
   end

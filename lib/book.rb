@@ -1,5 +1,8 @@
 require 'securerandom'
 require_relative 'item'
+require 'date'
+require 'time'
+
 
 class Book < Item
   attr_accessor :publisher, :cover_state
@@ -19,7 +22,7 @@ class Book < Item
   end
 
   def to_hash
-    { id: @id, title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), archived: @archived,
+    { id: @id, title: @title, publish_date: @publish_date, archived: @archived,
       publisher: @publisher, cover_state: @cover_state, author: @author.to_hash, label: @label.to_hash }
   end
 end

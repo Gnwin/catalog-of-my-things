@@ -17,7 +17,7 @@ class BookCreator
     author = @author_creator.create_author
 
     puts 'Please enter the publish date as YYYY-MM-DD'
-    publish_date = DateTime.parse(gets.chomp)
+    publish_date = gets.chomp
 
     puts 'Please enter the publisher name'
     publisher = gets.chomp

@@ -20,7 +20,7 @@ class MusicAlbumCreator
     source = @source_creator.create_source
 
     puts 'What did this album was published? (YYYY-MM-DD)'
-    publish_date = DateTime.parse(gets.chomp)
+    publish_date = gets.chomp
 
     MusicAlbum.new(title, publish_date, genre, source)
   end

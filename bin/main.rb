@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../lib/app'
-# require './data/storage'
+require_relative '../store/store'
 
 class Main
   def display_menu
@@ -25,7 +25,7 @@ class Main
 
   def main
     app = App.new
-    # store = Store.new
+    store = Store.new
     user_finished = false
     until user_finished
       display_menu
@@ -46,16 +46,22 @@ class Main
       when 12 then app.create_a_game
 
       when 0
-        # data1 = app.books.map(&:to_hash)
-        # store.write('books', './data/books.json', data1)
+        books_data = app.books.map(&:to_hash)
+        store.write('books', './data/books.json', books_data)
 
-        # data2 = app.people.map(&:to_hash)
-        # store.write('people', './data/people.json', data2)
+        music_album_data = app.music_albums.map(&:to_hash)
+        store.write('music_albums', './data/music_albums.json', music_album_data)
 
-        # puts 'Thanks for using my program. Bye!'
+        movies_data = app.movies.map(&:to_hash)
+        store.write('movies', './data/movies.json', movies_data)
+
+        games_data = app.games.map(&:to_hash)
+        store.write('games', './data/games.json', games_data)
+
+        puts 'Thanks for using my program. Bye!'
         user_finished = true
       else
-        puts 'Invalid Selection. Please select any input between 1-8 or b, ma, mo, g'
+        puts 'Invalid Selection. Please select any number between 1-12'
       end
     end
   end

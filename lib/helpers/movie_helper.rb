@@ -18,7 +18,7 @@ class MovieCreator
     source = @source_creator.create_source
 
     puts 'Type the movie date (YYYY-MM-DD) here:'
-    publish_date = DateTime.parse(gets.chomp)
+    publish_date = gets.chomp
 
     Movie.new(title, publish_date, genre, source)
   end
