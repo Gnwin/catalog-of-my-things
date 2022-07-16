@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
+
 require_relative '../lib/app'
 require_relative '../store/store'
+require_relative '../store/store_helper'
 
 class Main
   def display_menu
@@ -24,8 +26,8 @@ class Main
   end
 
   def main
-    app = App.new
-    store = Store.new
+    storedata = CatalogStoreAccess.new(Store.new)
+    app = App.new(*storedata.receive)
     user_finished = false
     until user_finished
       display_menu
@@ -47,16 +49,11 @@ class Main
 
       when 0
         books_data = app.books.map(&:to_hash)
-        store.write('books', './data/books.json', books_data)
-
         music_album_data = app.music_albums.map(&:to_hash)
-        store.write('music_albums', './data/music_albums.json', music_album_data)
-
         movies_data = app.movies.map(&:to_hash)
-        store.write('movies', './data/movies.json', movies_data)
-
         games_data = app.games.map(&:to_hash)
-        store.write('games', './data/games.json', games_data)
+   
+        storedata.send(books_data, music_album_data, movies_data, games_data)
 
         puts 'Thanks for using my program. Bye!'
         user_finished = true
