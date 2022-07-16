@@ -52,7 +52,7 @@ class Main
         music_album_data = app.music_albums.map(&:to_hash)
         movies_data = app.movies.map(&:to_hash)
         games_data = app.games.map(&:to_hash)
-   
+
         storedata.send(books_data, music_album_data, movies_data, games_data)
 
         puts 'Thanks for using my program. Bye!'

@@ -3,7 +3,6 @@ require_relative 'item'
 require 'date'
 require 'time'
 
-
 class Book < Item
   attr_accessor :publisher, :cover_state
 

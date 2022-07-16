@@ -20,7 +20,8 @@ class CatalogStoreAccess
     booksdata = booksdata.map do |book|
       author = Author.new(book['author']['first_name'], book['author']['last_name'], book['author']['id'])
       label = Label.new(book['label']['title'], book['label']['last_name'], book['label']['id'])
-      Book.new(book['title'], book['publish_date'], book['publisher'], book['cover_state'], author, label, book['archived'], book['id'] )
+      Book.new(book['title'], book['publish_date'], book['publisher'], book['cover_state'], author, label, book['archived'],
+               book['id'])
     end
 
     music_albums = @store.read('music_albums', './data/music_albums.json')
