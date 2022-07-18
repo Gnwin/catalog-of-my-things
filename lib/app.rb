@@ -6,7 +6,7 @@ require_relative './helpers/genre_helper'
 require_relative './helpers/label_helper'
 require_relative './helpers/author_helper'
 require_relative './helpers/source_helper'
-require_relative '../store/store'
+require_relative '../storage/store'
 require 'json'
 require 'pry'
 
