@@ -14,7 +14,7 @@ This setup and run procedure assumes you have Ruby, sql and rspec installed.
 
 - clone the repository `$ git clone https://github.com/Gnwin/catalog-of-my-things.git`
 - go to the project directory `$ cd catalog-of-my-things`
-- switch to branch with `git checkout f/schema`
+- switch to f/schema branch with `git checkout f/schema`
 - run the command `main`
 
 ## Built With
@@ -24,7 +24,7 @@ This setup and run procedure assumes you have Ruby, sql and rspec installed.
 ## Testing
 
 - clone the repository with this command `$ git clone https://github.com/Gnwin/catalog-of-my-things.git`
-- switch to test branch with this command `git checkout f/schema`
+- switch to f/schema branch with this command `git checkout f/schema`
 - at the root level of the project run the command `rspec`
 - see test results in the terminal
 
